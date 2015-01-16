@@ -3,6 +3,13 @@
 The following packages are required for the processing.
 
 
+```r
+if(!require(data.table)) {
+    install.packages("data.table")
+    library(data.table)
+}
+```
+
 ```
 ## Loading required package: data.table
 ## 
@@ -11,7 +18,16 @@ The following packages are required for the processing.
 ## The following object is masked _by_ '.GlobalEnv':
 ## 
 ##     .N
-## 
+```
+
+```r
+if(!require(dplyr)) {
+    install.packages("dplyr")
+    library(dplyr)
+}
+```
+
+```
 ## Loading required package: dplyr
 ## 
 ## Attaching package: 'dplyr'
@@ -27,8 +43,27 @@ The following packages are required for the processing.
 ## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union
-## 
+```
+
+```r
+if(!require(timeDate)) {
+    install.packages("timeDate")
+    library(timeDate)
+}
+```
+
+```
 ## Loading required package: timeDate
+```
+
+```r
+if(!require(lattice)) {
+    install.packages("lattice")
+    library(lattice)
+}
+```
+
+```
 ## Loading required package: lattice
 ```
 
