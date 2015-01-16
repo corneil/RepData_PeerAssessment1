@@ -7,7 +7,7 @@ output:
 
 The following packages are required for the processing.
 
-```{r echo=FALSE, results='hide'}
+```{r}
 if(!require(data.table)) {
     install.packages("data.table")
     library(data.table)
