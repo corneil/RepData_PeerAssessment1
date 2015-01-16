@@ -56,15 +56,22 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 
 <p>The following packages are required for the processing.</p>
+<pre class="r"><code>if(!require(data.table)) {
+    install.packages(&quot;data.table&quot;)
+    library(data.table)
+}</code></pre>
 <pre><code>## Loading required package: data.table
 ## 
 ## Attaching package: 'data.table'
 ## 
 ## The following object is masked _by_ '.GlobalEnv':
 ## 
-##     .N
-## 
-## Loading required package: dplyr
+##     .N</code></pre>
+<pre class="r"><code>if(!require(dplyr)) {
+    install.packages(&quot;dplyr&quot;)
+    library(dplyr)
+}</code></pre>
+<pre><code>## Loading required package: dplyr
 ## 
 ## Attaching package: 'dplyr'
 ## 
@@ -78,10 +85,17 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 ## 
 ## The following objects are masked from 'package:base':
 ## 
-##     intersect, setdiff, setequal, union
-## 
-## Loading required package: timeDate
-## Loading required package: lattice</code></pre>
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>if(!require(timeDate)) {
+    install.packages(&quot;timeDate&quot;)
+    library(timeDate)
+}</code></pre>
+<pre><code>## Loading required package: timeDate</code></pre>
+<pre class="r"><code>if(!require(lattice)) {
+    install.packages(&quot;lattice&quot;)
+    library(lattice)
+}</code></pre>
+<pre><code>## Loading required package: lattice</code></pre>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
 <p>The following code loads the data and converts the date from string to date.</p>
