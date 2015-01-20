@@ -87,8 +87,8 @@ The observations where steps is NA is ignored the rest is grouped by date and to
 bydate.totals <- original[!is.na(original$steps)] %>% 
     group_by(date) %>% 
     summarise(steps = sum(steps))
-
-hist(bydate.totals[,steps], xlab = 'Steps', ylab = 'Day')
+totals <- bydate.totals[,steps]
+hist(totals, xlab = 'Steps', ylab = 'Day')
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
@@ -138,7 +138,8 @@ The following code calculates total steps by date and displays a histogram for n
 
 ```r
 newbydate.totals <- newdt %>% group_by(date) %>% summarise(steps = sum(steps))
-hist(newbydate.totals[,steps], xlab = 'Steps', ylab = 'Day')
+newtotals <- newbydate.totals[,steps]
+hist(newtotals, xlab = 'Steps', ylab = 'Day')
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
